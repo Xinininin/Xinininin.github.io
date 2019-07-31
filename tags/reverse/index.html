@@ -97,7 +97,7 @@
   <meta name="description" content="El Psy Congroo">
 <meta property="og:type" content="website">
 <meta property="og:title" content="XinBlog">
-<meta property="og:url" content="https://Xinininin.github.io/index.html">
+<meta property="og:url" content="https://Xinininin.github.io/tags/reverse/index.html">
 <meta property="og:site_name" content="XinBlog">
 <meta property="og:description" content="El Psy Congroo">
 <meta property="og:locale" content="zh-CN">
@@ -111,7 +111,7 @@
 
   
   
-  <link rel="canonical" href="https://Xinininin.github.io/">
+  <link rel="canonical" href="https://Xinininin.github.io/tags/reverse/">
 
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>XinBlog</title>
+  <title>标签: reverse | XinBlog</title>
   
 
 
@@ -169,8 +169,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -212,7 +211,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -285,176 +284,73 @@
           
             
 
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
-    
+
+  
+  
+  
+  <div class="post-block tag">
+
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>reverse<small>标签</small>
+        </h1>
+      </div>
+
       
-
-  
-
-  
-  
-  
-
-  
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Xinininin.github.io/2019/07/31/reverse/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xinininin">
-      <meta itemprop="description" content="El Psy Congroo">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XinBlog">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
+          <a class="post-title-link" href="/2019/07/31/reverse/" itemprop="url">
+            
+              <span itemprop="name">ESP定律法手脱UPX笔记</span>
+            
+          </a>
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/31/reverse/" class="post-title-link" itemprop="url">ESP定律法手脱UPX笔记</a>
-              
-            
-          </h1>
-        
+      </h2>
 
-        <div class="post-meta">
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-07-31T15:22:06+08:00" content="2019-07-31">
+          07-31
+        </time>
+      </div>
 
-          
-          
-          
+    </header>
+  </article>
 
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
 
-              
-                
-              
-
-              <time title="创建时间：2019-07-31 15:22:06 / 修改时间：17:36:35" itemprop="dateCreated datePublished" datetime="2019-07-31T15:22:06+08:00">2019-07-31</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/逆向类/" itemprop="url" rel="index"><span itemprop="name">逆向类</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>第一步：查壳显示UPX 直接拉入OD<br><img src="/.io//1.jpg" alt><br>第二步：拖进OD后按F8跟进 发现寄存器ESP值发生变化 右键ESP值数据窗口跟随<br><img src="/.io//2.jpg" alt><br>第三步：在地址处下硬件访问断点 类型Dword 之后再F9运行程序<br><img src="/.io//3.jpg" alt><br>第四步：F8继续跟发现到JNZ时会一直循环跳转到上面 选中004BFCF1地址直接跳到该地址 再F8继续往下跟<br><img src="/.io//4.jpg" alt><br>第五步：    跳转到程序领空 用LoadPe工具把正在调试的程序转存下来<br><img src="/.io//5.jpg" alt><br><img src="/.io//6.jpg" alt><br>第六步：用Scylla_x86工具进行最后的脱壳修复<br><img src="/.io//7.jpg" alt></p>
-<p>总结：心好累 走了好多坑 不同操作系统下脱壳修复都会有不同问题  当然也有直接脱UPX的工具 直接放进去就能脱掉  手脱只是为了更熟练的掌握ESP定律脱壳的方法 当然还有像其他F12暂停法什么的就不说了 搞了这个博客来记录自己的学习过程 希望自己能够坚持下去吧Orz  </p>
-
-          
-        
       
     </div>
 
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
   
   
   
-  </article>
-
-
-    
-  </section>
 
   
+
 
 
           </div>
