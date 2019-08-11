@@ -94,16 +94,38 @@
 
 
 
-  <meta name="description" content="El Psy Congroo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="XinBlog">
-<meta property="og:url" content="https://Xinininin.github.io/archives/2019/index.html">
+  <meta name="description" content="0x0 Low等级文件上传 查看源码 不限制上传文件的类型和大小 直接上传一句话木马  上传后利用中国菜刀连接 拿到webshell 0x1 Medium等级文件上传 查看源码 限制上传类型及大小发现上传的格式被限制为MIME的image/jpeg通过burpsuite代理拦截对上传的Content-type进行修改为image/jpeg 然后转发出去成功上传 0x3 High等级文件上传 查看源">
+<meta name="keywords" content="渗透学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DVWA靶机文件上传及文件包含笔记">
+<meta property="og:url" content="https://Xinininin.github.io/2019/08/11/1/index.html">
 <meta property="og:site_name" content="XinBlog">
-<meta property="og:description" content="El Psy Congroo">
+<meta property="og:description" content="0x0 Low等级文件上传 查看源码 不限制上传文件的类型和大小 直接上传一句话木马  上传后利用中国菜刀连接 拿到webshell 0x1 Medium等级文件上传 查看源码 限制上传类型及大小发现上传的格式被限制为MIME的image/jpeg通过burpsuite代理拦截对上传的Content-type进行修改为image/jpeg 然后转发出去成功上传 0x3 High等级文件上传 查看源">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://xinininin.github.io/images/2/1.png">
+<meta property="og:image" content="https://xinininin.github.io/images/2/2.png">
+<meta property="og:image" content="https://xinininin.github.io/images/2/3.png">
+<meta property="og:image" content="https://xinininin.github.io/images/2/4.png">
+<meta property="og:image" content="https://xinininin.github.io/images/2/5.png">
+<meta property="og:image" content="https://xinininin.github.io/images/2/6.png">
+<meta property="og:image" content="https://xinininin.github.io/images/2/7.png">
+<meta property="og:image" content="https://xinininin.github.io/images/2/8.png">
+<meta property="og:image" content="https://xinininin.github.io/images/2/9.png">
+<meta property="og:image" content="https://xinininin.github.io/images/2/10.png">
+<meta property="og:image" content="https://xinininin.github.io/images/2/11.png">
+<meta property="og:image" content="https://xinininin.github.io/images/2/12.png">
+<meta property="og:image" content="https://xinininin.github.io/images/2/13.png">
+<meta property="og:image" content="https://xinininin.github.io/images/2/14.png">
+<meta property="og:image" content="https://xinininin.github.io/images/2/15.png">
+<meta property="og:image" content="https://xinininin.github.io/images/2/16.png">
+<meta property="og:image" content="https://xinininin.github.io/images/2/17.png">
+<meta property="og:image" content="https://xinininin.github.io/images/2/18.png">
+<meta property="og:image" content="https://xinininin.github.io/images/2/19.png">
+<meta property="og:updated_time" content="2019-08-11T13:46:57.996Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="XinBlog">
-<meta name="twitter:description" content="El Psy Congroo">
+<meta name="twitter:title" content="DVWA靶机文件上传及文件包含笔记">
+<meta name="twitter:description" content="0x0 Low等级文件上传 查看源码 不限制上传文件的类型和大小 直接上传一句话木马  上传后利用中国菜刀连接 拿到webshell 0x1 Medium等级文件上传 查看源码 限制上传类型及大小发现上传的格式被限制为MIME的image/jpeg通过burpsuite代理拦截对上传的Content-type进行修改为image/jpeg 然后转发出去成功上传 0x3 High等级文件上传 查看源">
+<meta name="twitter:image" content="https://xinininin.github.io/images/2/1.png">
 
 
 
@@ -111,7 +133,7 @@
 
   
   
-  <link rel="canonical" href="https://Xinininin.github.io/archives/2019/">
+  <link rel="canonical" href="https://Xinininin.github.io/2019/08/11/1/">
 
 
 
@@ -121,7 +143,7 @@
   };
 </script>
 
-  <title>归档 | XinBlog</title>
+  <title>DVWA靶机文件上传及文件包含笔记 | XinBlog</title>
   
 
 
@@ -169,7 +191,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -243,7 +265,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -284,203 +306,205 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Xinininin.github.io/2019/08/11/1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xinininin">
+      <meta itemprop="description" content="El Psy Congroo">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XinBlog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">DVWA靶机文件上传及文件包含笔记
+
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+
           
-        
-        嗯..! 目前共计 4 篇日志。 继续努力。
-      </span>
-      
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+          
 
-        
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+              
+                
+              
 
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/08/11/1/" itemprop="url">
+              <time title="创建时间：2019-08-11 21:03:19 / 修改时间：21:46:57" itemprop="dateCreated datePublished" datetime="2019-08-11T21:03:19+08:00">2019-08-11</time>
+            </span>
+          
+
+          
             
-              <span itemprop="name">DVWA靶机文件上传及文件包含笔记</span>
+
             
-          </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-11T21:03:19+08:00" content="2019-08-11">
-          08-11
-        </time>
-      </div>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/渗透学习/" itemprop="url" rel="index"><span itemprop="name">渗透学习</span></a></span>
 
-    </header>
-  </article>
+                
+                
+              
+            </span>
+          
 
+          
+            
+            
+          
 
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/08/05/life/" itemprop="url">
-            
-              <span itemprop="name">生活记</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-05T10:36:18+08:00" content="2019-08-05">
-          08-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/08/01/test/" itemprop="url">
-            
-              <span itemprop="name">实现逆向某加速器获取节点</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-01T12:00:00+08:00" content="2019-08-01">
-          08-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>0x0 Low等级文件上传 查看源码 不限制上传文件的类型和大小 直接上传一句话木马<br><img src="/images/2/1.png" alt><br><?php @eval($_POST['1']);?>  上传后利用中国菜刀连接 拿到webshell<br><img src="/images/2/2.png" alt></p>
+<p>0x1 Medium等级文件上传 查看源码 限制上传类型及大小<br><img src="/images/2/3.png" alt><br>发现上传的格式被限制为MIME的image/jpeg<br><img src="/images/2/4.png" alt><br>通过burpsuite代理拦截对上传的Content-type进行修改为image/jpeg 然后转发出去<br><img src="/images/2/5.png" alt><br><img src="/images/2/6.png" alt><br>成功上传</p>
+<p>0x3 High等级文件上传 查看源码限制上传的文件扩展名及大小<br><img src="/images/2/7.png" alt><br>利用edjpgcom制作图片一句话 利用文件包含来执行图片里面的代码<br>图片一句话木马尽量用小的图片上传否则有可能不包含<br><img src="/images/2/8.png" alt><br>先上传再包含<br><img src="/images/2/9.png" alt><br><img src="/images/2/10.png" alt><br>图片里的代码成功被执行并生成shell<br>妈的这里讲一下 最开始的时候我脑残的以为只要上传图片马然后利用菜刀去连就行了<br>结果各种报错 问了一下才知道图片里的代码没有被解析出来 这可能就是菜鸡吧:(<br><img src="/images/2/11.png" alt></p>
+<p>0x4 low等级文件包含<br>本地文件包含 LFI  利用文件上传图片木马 包含图片执行木马<br>远程文件包含 RFI  利用远程上传一句话木马或者图片木马<br>看下源码<br><img src="/images/2/12.png" alt><br>本地文件包含需要上传文件再包含执行<br>远程文件包含 我这里再kali下启动阿帕奇服务 并在主页下面写了一句话木马<br><img src="/images/2/13.png" alt><br><img src="/images/2/14.png" alt><br>包含进去<br><img src="/images/2/15.png" alt><br><img src="/images/2/16.png" alt><br>执行成功</p>
+<p>0x5 medium等级文件包含<br>本地文件包含同样<br>远程文件包含需要绕过字符串替换 查看源码<br><img src="/images/2/17.png" alt><br>如果检测到会把http://和https://替换成空字符<br>绕过思路 httphttp://://即可绕过字符串替换检测从而上传webshel<br><img src="/images/2/18.png" alt></p>
+<p>0x6 high等级文件包含<br><img src="/images/2/19.png" alt><br>无解  溜了</p>
+<p>妈的颓废了快一周了 要死了啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/31/reverse/" itemprop="url">
-            
-              <span itemprop="name">ESP定律法手脱UPX笔记</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-31T15:22:06+08:00" content="2019-07-31">
-          07-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/渗透学习/" rel="tag"># 渗透学习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/05/life/" rel="next" title="生活记">
+                <i class="fa fa-chevron-left"></i> 生活记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -731,6 +755,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
 
   
 
@@ -746,6 +774,8 @@
 
   
 
+
+  
 
 
   
